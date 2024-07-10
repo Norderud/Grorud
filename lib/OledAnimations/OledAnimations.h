@@ -1,6 +1,24 @@
-#ifndef CHARACTERMAP_H
-#define CHARACTERMAP_H
+#ifndef OLEDANIMATIONS_H
+#define OLEDANIMATIONS_H
+#include <U8g2lib.h>
 
+class OledAnimations {
+public:
+    explicit OledAnimations(U8X8_SSD1306_128X64_NONAME_SW_I2C& u8x8);
+    void drawTriangle();
+    void pipeAnimation();
+    void loopPipeAnimation(int times);
+    void loopTriangle(int times);
+
+    void drawDick();
+
+    void drawAnimation();
+    void removeAnimation();
+
+
+private:
+    U8X8_SSD1306_128X64_NONAME_SW_I2C& u8x8;
+};
 struct Chars {
     static constexpr char downLeftUpRight = '/';
     static constexpr char downRightLeftUp = '\\';
@@ -19,6 +37,8 @@ struct Chars {
     static constexpr char stop = '\xb0';
     static constexpr char arrow_4x4_right_arrow = '\xa0';
     static constexpr char arrow_4x4_left_arrow = '\x90';
+    static constexpr char raindrop = '\x9e';
+
 };
 
-#endif // CHARACTERMAP_H
+#endif // OLEDANIMATIONS_H
