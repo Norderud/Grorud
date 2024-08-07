@@ -1,13 +1,19 @@
+// TempSensor.h
 #ifndef TEMPSENSOR_H
 #define TEMPSENSOR_H
-#include <DallasTemperature.h>
-#include <OneWire.h>
+
+#include <DHT.h>
 
 class TempSensor {
 public:
-    TempSensor();
+    TempSensor(uint8_t pin);
+    void begin();
+    float readTemp();
+    float readHumidity();
 
-    static float readTemp();
+private:
+    DHT dht;
 };
 
-#endif //TEMPSENSOR_H
+#endif // TEMPSENSOR_H
+

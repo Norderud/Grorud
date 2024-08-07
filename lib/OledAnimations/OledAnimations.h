@@ -10,7 +10,7 @@ public:
     void loopPipeAnimation(int times);
     void loopTriangle(int times);
 
-    void drawDick();
+    void drawGrorud();
 
     void drawAnimation();
     void removeAnimation();

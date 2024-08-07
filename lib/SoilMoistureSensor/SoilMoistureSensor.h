@@ -1,18 +1,22 @@
-
 #ifndef SOILMOISTURESENSOR_H
 #define SOILMOISTURESENSOR_H
-#include <WString.h>
 #include <Arduino.h>
 
 constexpr int dry = 1024;
-constexpr int wet = 605;
+constexpr int wet = 420;
 
 class SoilMoistureSensor {
 public:
-    SoilMoistureSensor();
+    explicit SoilMoistureSensor(int pin);
 
-    static int readMoisturePercentage();
-    String formatMoisturePercentage(int moisture);
+    String readMoisturePercentage();
+
+    int readMoisturePercentageInt();
+
+private:
+    static String digitStringPadding(int digit, const String &text);
+
+    int pin;
 };
 
-#endif //SOILMOISTURESENSOR_H
+#endif

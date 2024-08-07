@@ -18,7 +18,7 @@ uint8_t blackBoxTile[16] = {
     0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
 
-void OledAnimations::drawDick() {
+void OledAnimations::drawGrorud() {
     u8x8.setFont(u8x8_font_amstrad_cpc_extended_f);
     String s = "GRORUD";
     u8x8.draw2x2String((cols / 2) - s.length(), 4, "GRORUD");

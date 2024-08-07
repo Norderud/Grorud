@@ -5,10 +5,8 @@
 #include <Arduino.h>
 #include <OledAnimations.h>
 #include <OledMenuScreen.h>
-#include <TempSensor.h>
-#include <SoilMoistureSensor.h>
-#include <DallasTemperature.h>
-#include <OneWire.h>
-
-
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+#include <SoftwareSerial.h>
+#include <ArduinoJson.h>
 #endif //HEADER_H

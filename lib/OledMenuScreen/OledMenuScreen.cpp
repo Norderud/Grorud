@@ -20,18 +20,18 @@ OledMenuScreen::OledMenuScreen() {
     getU8x8().begin();
 }
 void OledMenuScreen::drawHeaderText(const String &headerText) {
-    getU8x8().setFont(u8x8_font_pressstart2p_r);
+    getU8x8().setFont(u8x8_font_torussansbold8_r);
     getU8x8().setInverseFont(0);
     getU8x8().draw1x2String(maxWidth/2 - headerText.length()/2, 0 , headerText.c_str());
     getU8x8().println();
 }
 void OledMenuScreen::drawContentTextLeft(const int row, const String &contentText) {
-    getU8x8().setFont(u8x8_font_pressstart2p_r);
+    getU8x8().setFont(u8x8_font_amstrad_cpc_extended_f);
     getU8x8().setCursor(0, contentStartY + row);
     getU8x8().print(contentText.c_str());
 }
 void OledMenuScreen::drawContentTextRight(const int row, const String &contentText) {
-    getU8x8().setFont(u8x8_font_victoriabold8_r);
+    getU8x8().setFont(u8x8_font_amstrad_cpc_extended_f);
     getU8x8().setCursor(maxWidth - contentText.length(), contentStartY + row);
     getU8x8().print(contentText.c_str());
 }
